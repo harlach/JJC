@@ -14,6 +14,11 @@ public class healthBar : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+       //empty for now.
+    }
+
+    private void Update()
+    {
         healthUpdate();
     }
 
@@ -23,9 +28,10 @@ public class healthBar : MonoBehaviour {
         health.rectTransform.localScale = new Vector3(healthPercent, 1, 1);
         healthPercentage.text = (healthPercent * 100).ToString() + '%';
 
-        if(Input.GetKey("p"))
+        if(Input.GetKeyDown("p"))
         {
             damagePlayer(10);
+            //Debug.Log("The Player took damage");
         }
     } 
 
